@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  noticeboard:
+    container_name: noticeboard
+    image: rumsan/noticeboard:main
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    restart: always
+    ports:
+      - 6701:3000
